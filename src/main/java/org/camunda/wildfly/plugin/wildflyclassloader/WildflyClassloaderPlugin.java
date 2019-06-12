@@ -19,18 +19,12 @@ package org.camunda.wildfly.plugin.wildflyclassloader;
 import org.camunda.bpm.engine.impl.cfg.AbstractProcessEnginePlugin;
 import org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.camunda.bpm.engine.impl.interceptor.CommandInterceptor;
-import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.slf4j.LoggerFactory.getLogger;
-
 
 public class WildflyClassloaderPlugin extends AbstractProcessEnginePlugin {
-
-  private static final long serialVersionUID = 1L;
-  private final Logger logger = getLogger(this.getClass());
 
   @Override
   public void preInit(ProcessEngineConfigurationImpl processEngineConfiguration) {
@@ -50,6 +44,5 @@ public class WildflyClassloaderPlugin extends AbstractProcessEnginePlugin {
     }
 
     commandInterceptorList.add(new ExecuteJobsInterceptor());
-    logger.debug("{} added to list of pre-command interceptors.", ExecuteJobsInterceptor.class.getName());
   }
 }

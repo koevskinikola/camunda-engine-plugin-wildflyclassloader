@@ -19,9 +19,8 @@
     <properties>
         <version.java>1.8</version.java>
         <camunda.version>7.10.4-ee</camunda.version>
-        <slf4j.version>1.7.25</slf4j.version>
-        <h2.version>1.4.196</h2.version>
 
+        <h2.version>1.4.196</h2.version>
         <surefire.runOrder>reversealphabetical</surefire.runOrder>
 
         <!-- disable javadoc linter for JDK8 to not fail on incomplete javadoc -->
@@ -61,18 +60,7 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jul-to-slf4j</artifactId>
-            <version>${slf4j.version}</version>
-            <scope>test</scope>
-        </dependency>
+
     </dependencies>
 
 </project>
